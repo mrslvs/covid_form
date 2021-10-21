@@ -11,9 +11,9 @@
     <div class="container">
       <div class="box">
         <h3>Osobné údaje (povinné)</h3>
-        <form action="" method="post">
+        <form action="" method="post" name="personal-info">
           <div class="required">
-            <label for="name">Meno:</label>
+            <label for="name" class="main-label">Meno:</label>
             <input
               type="text"
               name="name"
@@ -22,35 +22,47 @@
               required
             />
             <br />
-            <label for="surname">Priezvisko:</label>
+            <label for="surname" class="main-label">Priezvisko:</label>
             <input
               type="text"
               name="priezvisko"
               id="surname"
               placeholder="zadaj priezvisko"
-              equired
+              required
             />
             <br />
-            <label for="date">Dátum narodenia:</label>
-            <input type="date" id="birthdate" required />
+            <label for="date" class="main-label">Dátum narodenia:</label>
+            <input type="date" id="date" required />
             <br />
-            <label for="age">Vek:</label>
+            <label for="age" class="main-label">Vek:</label>
             <input
               type="number"
+              id="age"
               min="0"
               step="1"
               placeholder="vek musí korespondovať"
               required
             />
+            <label class="main-label">Pohlavie:</label>
+            <input type="radio" id="male" name="gender" value="m" />
+            <span>Muž</span>
+            <input type="radio" id="female" name="gender" value="f" />
+            <span>Žena</span>
           </div>
         </form>
       </div>
       <div class="box">
-        <form action="" method="post"></form>
+        <form action="" method="post">
+          <label class="main-label">Ste zaočkovaný/á</label>
+          <input type="radio" id="vaccinated" value="y" name="vaccine" />
+          <label for="vaccinated">Áno</label>
+          <input type="radio" id="un-vaccinated" value="n" name="vaccine" />
+          <label for="un-vaccinated">Nie</label>
+        </form>
       </div>
     </div>
+    <footer>
+      <script src="./main.js"></script>
+    </footer>
   </body>
-  <footer>
-    <script src="./main.js"></script>
-  </footer>
 </html>
