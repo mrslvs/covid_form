@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Covid Dotazník</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h3>Osobné údaje (povinné)</h3>
+        <form action="" method="post">
+          <div class="required">
+            <label for="name">Meno:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="zadaj meno"
+              required
+            />
+            <br />
+            <label for="surname">Priezvisko:</label>
+            <input
+              type="text"
+              name="priezvisko"
+              id="surname"
+              placeholder="zadaj priezvisko"
+              equired
+            />
+            <br />
+            <label for="date">Dátum narodenia:</label>
+            <input type="date" id="birthdate" required />
+            <br />
+            <label for="age">Vek:</label>
+            <input
+              type="number"
+              min="0"
+              step="1"
+              placeholder="vek musí korespondovať"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <form action="" method="post"></form>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script src="./main.js"></script>
+  </footer>
 </html>
