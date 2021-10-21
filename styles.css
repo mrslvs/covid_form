@@ -23,11 +23,6 @@ input:required {
   font-weight: bold;
 }
 
-form input {
-  /* width: 100%;
-  clear: both; */
-}
-
 .required label::after {
   content: "*";
 }

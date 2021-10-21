@@ -12,7 +12,7 @@
       <div class="box">
         <h3>Osobné údaje (povinné)</h3>
         <form action="" method="post" name="personal-info">
-          <div class="required">
+          <div class="required-form">
             <label for="name" class="main-label">Meno:</label>
             <input
               type="text"
@@ -43,22 +43,26 @@
               placeholder="vek musí korespondovať"
               required
             />
+            <br />
             <label class="main-label">Pohlavie:</label>
-            <input type="radio" id="male" name="gender" value="m" />
-            <span>Muž</span>
+            <input type="radio" id="male" name="gender" value="m" required />
+            <label for="male">Muž</label>
             <input type="radio" id="female" name="gender" value="f" />
-            <span>Žena</span>
+            <label for="female">Žena</label>
           </div>
         </form>
       </div>
       <div class="box">
-        <form action="" method="post">
-          <label class="main-label">Ste zaočkovaný/á</label>
-          <input type="radio" id="vaccinated" value="y" name="vaccine" />
-          <label for="vaccinated">Áno</label>
-          <input type="radio" id="un-vaccinated" value="n" name="vaccine" />
-          <label for="un-vaccinated">Nie</label>
-        </form>
+        <div class="additional">
+          <form action="" method="post" name="additional-info">
+            <label class="main-label">Ste zaočkovaný/á</label>
+            <input type="radio" id="vaccinated" value="y" name="vaccine" />
+            <label for="vaccinated">Áno</label>
+            <input type="radio" id="un-vaccinated" value="n" name="vaccine" />
+            <label for="un-vaccinated">Nie</label>
+            <br />
+          </form>
+        </div>
       </div>
     </div>
     <footer>
