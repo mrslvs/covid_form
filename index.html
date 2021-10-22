@@ -32,11 +32,12 @@
             />
             <br />
             <label for="date" class="main-label">Dátum narodenia:</label>
-            <input type="date" id="date" required />
+            <input type="date" name="birthdate" id="date" required />
             <br />
             <label for="age" class="main-label">Vek:</label>
             <input
               type="number"
+              name="age"
               id="age"
               min="0"
               step="1"
@@ -45,23 +46,84 @@
             />
             <br />
             <label class="main-label">Pohlavie:</label>
-            <input type="radio" id="male" name="gender" value="m" required />
+            <input type="radio" name="gender" id="male" value="m" required />
             <label for="male">Muž</label>
-            <input type="radio" id="female" name="gender" value="f" />
+            <input type="radio" name="gender" id="female" value="f" />
             <label for="female">Žena</label>
+            <br />
+            <label for="country-list" class="main-label"
+              >Odkiaľ pochádzate?</label
+            >
+            <input list="country" name="country" id="country-list" />
+            <datalist id="country">
+              <option value="Slovensko"></option>
+              <option value="Česko"></option>
+              <option value="Maďarsko"></option>
+            </datalist>
+            <label class="main-label">Z akého mesta?</label>
+            <div class="hideme">
+              <datalist id="city" class="main-label">
+                <option value="BA"></option>
+                <option value="BB"></option>
+                <option value="KE"></option>
+              </datalist>
+            </div>
           </div>
         </form>
       </div>
       <div class="box">
         <div class="additional">
+          <!-- 💉 ? -->
           <form action="" method="post" name="additional-info">
             <label class="main-label">Ste zaočkovaný/á</label>
-            <input type="radio" id="vaccinated" value="y" name="vaccine" />
+            <input
+              type="radio"
+              name="vaccine"
+              id="vaccinated"
+              value="y"
+              onchange="hideOvercome()"
+            />
             <label for="vaccinated">Áno</label>
-            <input type="radio" id="un-vaccinated" value="n" name="vaccine" />
-            <label for="un-vaccinated">Nie</label>
+            <input
+              type="radio"
+              name="vaccine"
+              id="nonvaccinated"
+              value="n"
+              onchange="displayOvercome()"
+            />
+            <label for="nonvaccinated">Nie</label>
             <br />
-            <label for=""></label>
+            <div class="hideme" id="overcomequestion">
+              <label class="main-label">Prekonali ste covid?</label>
+              <input
+                type="radio"
+                name="overcome"
+                id="overcome"
+                value="y"
+                onchange="displayOvercomeDays()"
+              />
+              <label for="overcome">Áno</label>
+              <input
+                type="radio"
+                name="overcome"
+                id="overcomenot"
+                value="n"
+                onchange="hideOvercomeDays()"
+              />
+              <label for="overcomenot">Nie</label>
+              <br />
+            </div>
+            <div class="hideme" id="overcomedaysquestion">
+              <label for="overcomedays" class="main-label"
+                >Pred koľkými dňami Vám bol COVID zistený?</label
+              >
+              <input
+                type="number"
+                name="overcomedays"
+                id="overcomedays"
+                min="0"
+              />
+            </div>
           </form>
         </div>
       </div>

@@ -23,6 +23,10 @@ input:required {
   font-weight: bold;
 }
 
+.hideme {
+  display: none;
+}
+
 .required label::after {
   content: "*";
 }
