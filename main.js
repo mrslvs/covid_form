@@ -30,3 +30,34 @@ function hideOvercomeDays(e) {
 function showCitiesSlovakia(e) {
   console.log("slovakia");
 }
+
+// Country
+const selectCountry = document.getElementById("country-list");
+
+const showSlovakArea = document.getElementById("showAreaSlovakia");
+const showCzechArea = document.getElementById("showAreaCzech");
+const showHungaryArea = document.getElementById("showAreaHungary");
+
+selectCountry.addEventListener("change", (event) => {
+  switch (event.target.value) {
+    case "svk":
+      console.log("som zo slovenska");
+      showSlovakArea.style.display = "inline-block";
+      //   hide others
+      showCzechArea.style.display = "none";
+      showHungaryArea.style.display = "none";
+      break;
+    case "cze":
+      console.log("som z ciech");
+      showCzechArea.style.display = "inline-block";
+      //   hide others
+      showSlovakArea.style.display = "none";
+      showHungaryArea.style.display = "none";
+    case "hun":
+      console.log("som z madarska");
+      showHungaryArea.style.display = "inline-block";
+      //   hide others
+      showSlovakArea.style.display = "none";
+      showCzechArea.style.display = "none";
+  }
+});

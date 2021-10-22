@@ -61,12 +61,9 @@
             >
             <input list="country" name="country" id="country-list" />
             <datalist id="country">
-              <option
-                value="Slovensko"
-                onchange="showCitiesSlovakia()"
-              ></option>
-              <option value="Česko"></option>
-              <option value="Maďarsko"></option>
+              <option value="svk">Slovensko</option>
+              <option value="cze">Česko</option>
+              <option value="hun">Maďarsko</option>
             </datalist>
             <br />
             <!-- AREA -->
@@ -75,44 +72,60 @@
             <div class="hideme" id="showAreaSlovakia">
               <input list="area-svk" name="area" id="area-slovakia" />
               <datalist id="area-svk">
-                <option value="Západ"></option>
-                <option value="Stred"></option>
-                <option value="Východ"></option>
+                <option value="west">Západ</option>
+                <option value="mid">Stred</option>
+                <option value="east">Východ</option>
               </datalist>
             </div>
-
             <!-- AREA CZE -->
             <div class="hideme" id="showAreaCzech">
               <input list="area-cze" name="area" id="area-czech" />
               <datalist id="area-cze">
-                <option value="Juhočeský"></option>
-                <option value="Juhomoravský"></option>
-                <option value="Zlínsky"></option>
+                <option value="jc">Juhočeský</option>
+                <option value="jm">Juhomoravský</option>
+                <option value="zl">Zlínsky</option>
               </datalist>
             </div>
             <!-- AREA HUN -->
             <div class="hideme" id="showAreaHungary">
               <input list="area-hun" name="area" id="area-hungary" />
               <datalist id="area-hun">
-                <option value="Komárňansko"></option>
-                <option value="Novohradská"></option>
-                <option value="Rábsko"></option>
+                <option value="ko">Komárňansko</option>
+                <option value="no">Novohradská</option>
+                <option value="ra">Rábsko</option>
               </datalist>
             </div>
             <br />
             <!-- CITY -->
             <!-- CITY SVK -->
+            <!-- CITY SVK west -->
             <label class="main-label">Z akého mesta?</label>
             <div class="hideme">
-              <datalist id="city-slovakia">
+              <datalist id="city-slovakia-west">
                 <option value="Bratislava"></option>
-                <option value="Banská Bystrica"></option>
-                <option value="Košice"></option>
+                <option value="Malacky"></option>
+                <option value="Senec"></option>
               </datalist>
-              <!-- CITY CZE -->
-              <!-- CITY HUN -->
-              <br />
             </div>
+            <!-- CITY SVK mid-->
+            <div class="hideme"></div>
+            <!-- CITY SVK east-->
+            <div class="hideme"></div>
+            <!-- CITY CZE -->
+            <!-- CITY CZE jc-->
+            <div class="hideme"></div>
+            <!-- CITY CZE jm-->
+            <div class="hideme"></div>
+            <!-- CITY CZE zl-->
+            <div class="hideme"></div>
+            <!-- CITY HUN -->
+            <!-- CITY HUN ko-->
+            <div class="hideme"></div>
+            <!-- CITY HUN no-->
+            <div class="hideme"></div>
+            <!-- CITY HUN ra-->
+            <div class="hideme"></div>
+            <br />
           </div>
         </form>
       </div>
