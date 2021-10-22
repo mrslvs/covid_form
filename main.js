@@ -26,3 +26,7 @@ function hideOvercomeDays(e) {
   console.log("predsa len som neprekonal covid");
   overcomeDays.style.display = "none";
 }
+
+function showCitiesSlovakia(e) {
+  console.log("slovakia");
+}

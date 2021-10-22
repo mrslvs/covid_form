@@ -13,6 +13,7 @@
         <h3>Osobné údaje (povinné)</h3>
         <form action="" method="post" name="personal-info">
           <div class="required-form">
+            <!-- NAME -->
             <label for="name" class="main-label">Meno:</label>
             <input
               type="text"
@@ -22,6 +23,7 @@
               required
             />
             <br />
+            <!-- SURNAME -->
             <label for="surname" class="main-label">Priezvisko:</label>
             <input
               type="text"
@@ -31,6 +33,7 @@
               required
             />
             <br />
+            <!-- BIRTHDATE -->
             <label for="date" class="main-label">Dátum narodenia:</label>
             <input type="date" name="birthdate" id="date" required />
             <br />
@@ -45,28 +48,70 @@
               required
             />
             <br />
+            <!-- GENDER -->
             <label class="main-label">Pohlavie:</label>
             <input type="radio" name="gender" id="male" value="m" required />
             <label for="male">Muž</label>
             <input type="radio" name="gender" id="female" value="f" />
             <label for="female">Žena</label>
             <br />
+            <!-- COUNTRY -->
             <label for="country-list" class="main-label"
               >Odkiaľ pochádzate?</label
             >
             <input list="country" name="country" id="country-list" />
             <datalist id="country">
-              <option value="Slovensko"></option>
+              <option
+                value="Slovensko"
+                onchange="showCitiesSlovakia()"
+              ></option>
               <option value="Česko"></option>
               <option value="Maďarsko"></option>
             </datalist>
+            <br />
+            <!-- AREA -->
+            <label class="main-label">Z ktorej oblasti?</label>
+            <!-- AREA SVK -->
+            <div class="hideme" id="showAreaSlovakia">
+              <input list="area-svk" name="area" id="area-slovakia" />
+              <datalist id="area-svk">
+                <option value="Západ"></option>
+                <option value="Stred"></option>
+                <option value="Východ"></option>
+              </datalist>
+            </div>
+
+            <!-- AREA CZE -->
+            <div class="hideme" id="showAreaCzech">
+              <input list="area-cze" name="area" id="area-czech" />
+              <datalist id="area-cze">
+                <option value="Juhočeský"></option>
+                <option value="Juhomoravský"></option>
+                <option value="Zlínsky"></option>
+              </datalist>
+            </div>
+            <!-- AREA HUN -->
+            <div class="hideme" id="showAreaHungary">
+              <input list="area-hun" name="area" id="area-hungary" />
+              <datalist id="area-hun">
+                <option value="Komárňansko"></option>
+                <option value="Novohradská"></option>
+                <option value="Rábsko"></option>
+              </datalist>
+            </div>
+            <br />
+            <!-- CITY -->
+            <!-- CITY SVK -->
             <label class="main-label">Z akého mesta?</label>
             <div class="hideme">
-              <datalist id="city" class="main-label">
-                <option value="BA"></option>
-                <option value="BB"></option>
-                <option value="KE"></option>
+              <datalist id="city-slovakia">
+                <option value="Bratislava"></option>
+                <option value="Banská Bystrica"></option>
+                <option value="Košice"></option>
               </datalist>
+              <!-- CITY CZE -->
+              <!-- CITY HUN -->
+              <br />
             </div>
           </div>
         </form>
@@ -93,6 +138,7 @@
             />
             <label for="nonvaccinated">Nie</label>
             <br />
+            <!-- TODO: which vaccine -->
             <div class="hideme" id="overcomequestion">
               <label class="main-label">Prekonali ste covid?</label>
               <input
