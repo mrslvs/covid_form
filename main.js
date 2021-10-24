@@ -74,3 +74,8 @@ const showSlovakEastCity = document.getElementById("showSlovakEastCity");
 const showCzechJcCity = document.getElementById("showCzechJcCity");
 const showCzechJmCity = document.getElementById("showCzechJmCity");
 const showCzechZlCity = document.getElementById("showCzechZlCitygi");
+
+// CITY hun
+const showHungaryKoCity = document.getElementById("showHungaryKoCity");
+const showHungaryNoCity = document.getElementById("showHungaryNoCity");
+const showHungaryRaCity = document.getElementById("showHungaryRaCity");
