@@ -31,6 +31,10 @@ function showCitiesSlovakia(e) {
   console.log("slovakia");
 }
 
+// ***********************************************
+// ****************SELECTION LIST****************
+// ***********************************************
+
 // COUNTRY
 const selectCountry = document.getElementById("country-list");
 
@@ -46,6 +50,15 @@ selectCountry.addEventListener("change", (event) => {
       //   hide others
       showCzechArea.style.display = "none";
       showHungaryArea.style.display = "none";
+      // hide cities of cze & hun
+      // cze
+      showCzechJcCity.style.display = "none";
+      showCzechJmCity.style.display = "none";
+      showCzechZlCity.style.display = "none";
+      // hun
+      showHungaryKoCity.style.display = "none";
+      showHungaryNoCity.style.display = "none";
+      showHungaryRaCity.style.display = "none";
       break;
     case "cze":
       console.log("som z ciech");
@@ -53,6 +66,15 @@ selectCountry.addEventListener("change", (event) => {
       //   hide others
       showSlovakArea.style.display = "none";
       showHungaryArea.style.display = "none";
+      // hide cities of svk & hun
+      // svk
+      showSlovakWestCity.style.display = "none";
+      showSlovakMidCity.style.display = "none";
+      showSlovakEastCity.style.display = "none";
+      // hun
+      showHungaryKoCity.style.display = "none";
+      showHungaryNoCity.style.display = "none";
+      showHungaryRaCity.style.display = "none";
       break;
     case "hun":
       console.log("som z madarska");
@@ -60,6 +82,15 @@ selectCountry.addEventListener("change", (event) => {
       //   hide others
       showSlovakArea.style.display = "none";
       showCzechArea.style.display = "none";
+      // hide cities of svk & cze
+      // svk
+      showSlovakWestCity.style.display = "none";
+      showSlovakMidCity.style.display = "none";
+      showSlovakEastCity.style.display = "none";
+      // cze
+      showCzechJcCity.style.display = "none";
+      showCzechJmCity.style.display = "none";
+      showCzechZlCity.style.display = "none";
       break;
   }
 });
@@ -78,16 +109,22 @@ areaSlovakia.addEventListener("change", (event) => {
       console.log("som zo zapadu, zobraz zapadne mesta");
       showSlovakWestCity.style.display = "inline-block";
       // hide others
+      showSlovakMidCity.style.display = "none";
+      showSlovakEastCity.style.display = "none";
       break;
     case "mid":
       console.log("som zo stredu, zobraz stredne mesta");
       showSlovakMidCity.style.display = "inline-block";
       // hide others
+      showSlovakWestCity.style.display = "none";
+      showSlovakEastCity.style.display = "none";
       break;
     case "east":
       console.log("som zo vychodu, zobraz vychodne mesta");
       showSlovakEastCity.style.display = "inline-block";
       // hide others
+      showSlovakWestCity.style.display = "none";
+      showSlovakMidCity.style.display = "none";
       break;
   }
 });
@@ -95,26 +132,32 @@ areaSlovakia.addEventListener("change", (event) => {
 //CITY cze
 const showCzechJcCity = document.getElementById("showCzechJcCity");
 const showCzechJmCity = document.getElementById("showCzechJmCity");
-const showCzechZlCity = document.getElementById("showCzechZlCitygi");
+const showCzechZlCity = document.getElementById("showCzechZlCity");
 
 const areaCzech = document.getElementById("areaCzech");
 
 areaCzech.addEventListener("change", (event) => {
   switch (event.target.value) {
     case "jc":
-      console.log("som zo zapadu, zobraz zapadne mesta");
-      showSlovakWestCity.style.display = "inline-block";
+      console.log("som jiznich cech, zobraz jihoceske mesta");
+      showCzechJcCity.style.display = "inline-block";
       // hide others
+      showCzechJmCity.style.display = "none";
+      showCzechZlCity.style.display = "none";
       break;
     case "jm":
-      console.log("som zo stredu, zobraz stredne mesta");
-      showSlovakMidCity.style.display = "inline-block";
+      console.log("som jizni moravy, zobraz jihomoravske mesta");
+      showCzechJmCity.style.display = "inline-block";
       // hide others
+      showCzechJcCity.style.display = "none";
+      showCzechZlCity.style.display = "none";
       break;
-    case "Zl":
-      console.log("som zo vychodu, zobraz vychodne mesta");
-      showSlovakEastCity.style.display = "inline-block";
+    case "zl":
+      console.log("som zo zlina, zobraz zlinske mesta");
+      showCzechZlCity.style.display = "inline-block";
       // hide others
+      showCzechJcCity.style.display = "none";
+      showCzechJmCity.style.display = "none";
       break;
   }
 });
@@ -123,3 +166,28 @@ areaCzech.addEventListener("change", (event) => {
 const showHungaryKoCity = document.getElementById("showHungaryKoCity");
 const showHungaryNoCity = document.getElementById("showHungaryNoCity");
 const showHungaryRaCity = document.getElementById("showHungaryRaCity");
+
+const areaHungary = document.getElementById("areaHungary");
+
+areaHungary.addEventListener("change", (event) => {
+  switch (event.target.value) {
+    case "ko":
+      showHungaryKoCity.style.display = "inline-block";
+      // hide others
+      showHungaryNoCity.style.display = "none";
+      showHungaryRaCity.style.display = "none";
+      break;
+    case "no":
+      showHungaryNoCity.style.display = "inline-block";
+      // hide others
+      showHungaryKoCity.style.display = "none";
+      showHungaryRaCity.style.display = "none";
+      break;
+    case "ra":
+      showHungaryRaCity.style.display = "inline-block";
+      // hide others
+      showHungaryKoCity.style.display = "none";
+      showHungaryNoCity.style.display = "none";
+      break;
+  }
+});
