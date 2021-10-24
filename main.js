@@ -31,7 +31,7 @@ function showCitiesSlovakia(e) {
   console.log("slovakia");
 }
 
-// Country
+// COUNTRY
 const selectCountry = document.getElementById("country-list");
 
 const showSlovakArea = document.getElementById("showAreaSlovakia");
@@ -53,11 +53,21 @@ selectCountry.addEventListener("change", (event) => {
       //   hide others
       showSlovakArea.style.display = "none";
       showHungaryArea.style.display = "none";
+      break;
     case "hun":
       console.log("som z madarska");
       showHungaryArea.style.display = "inline-block";
       //   hide others
       showSlovakArea.style.display = "none";
       showCzechArea.style.display = "none";
+      break;
   }
 });
+
+// CITY
+// CITY svk
+const showSlovakWestCity = document.getElementById("showSlovakWestCity");
+const showSlovakMidCity = document.getElementById("showSlovakMidCity");
+const showSlovakEastCity = document.getElementById("showSlovakEastCity");
+
+//CITY hun
