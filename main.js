@@ -70,4 +70,7 @@ const showSlovakWestCity = document.getElementById("showSlovakWestCity");
 const showSlovakMidCity = document.getElementById("showSlovakMidCity");
 const showSlovakEastCity = document.getElementById("showSlovakEastCity");
 
-//CITY hun
+//CITY cze
+const showCzechJcCity = document.getElementById("showCzechJcCity");
+const showCzechJmCity = document.getElementById("showCzechJmCity");
+const showCzechZlCity = document.getElementById("showCzechZlCitygi");
